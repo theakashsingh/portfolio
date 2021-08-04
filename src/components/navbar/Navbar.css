@@ -70,7 +70,7 @@ nav{
 
     .logo{
         font-size: 17px;
-        margin-left: 1.5rem;
+        margin-left: 0.5rem;
     }
  
     .NavbarDesktopLink{
@@ -79,7 +79,7 @@ nav{
 
     .NavbarMobileLink{
         display:inline-block;
-        margin-right: 2rem;
+        margin-right: 1rem;
         cursor: pointer;
     }
     

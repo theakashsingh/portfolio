@@ -20,7 +20,7 @@
 }
 
 .home-left-row{
-    width: 70%;
+    width: 60%;
     height: max-content;
 }
 
@@ -78,6 +78,7 @@
     }
 
     .home-left-row{
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;

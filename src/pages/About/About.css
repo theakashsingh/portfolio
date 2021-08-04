@@ -50,7 +50,6 @@
 }
 
 .about-bio p{
-    
     font-size: 20px;
     font-weight: lighter;
     letter-spacing: 1px;
@@ -79,6 +78,7 @@
 
     .about-right{
         flex-basis: 100%;
+        align-items: flex-start;
         justify-content: center;
     }
 
