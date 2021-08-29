@@ -38,9 +38,9 @@ nav{
 }
 
 .NavbarDesktopLink ul li{
-    
+    display: inline-block; 
     padding: 0 0 5px 0;
-    list-style: none;
+    /* list-style: none; */
     transition: 0.6s;
 }
 
