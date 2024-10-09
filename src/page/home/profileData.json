@@ -2,10 +2,10 @@
     "name": "Akash Singh",
     "role": "Frontend Developer",
     "description": "Passionate about creating beautiful and functional web applications",
-    "resume": "/path/to/resume.pdf",
+    "resume": "/home/sky/projects/portfolio/src/assets/Akash Resume.pdf",
     "social": {
-      "github": "https://github.com/johndoe",
-      "linkedin": "https://linkedin.com/in/johndoe",
+      "github": "https://github.com/theakashsingh",
+      "linkedin": "https://www.linkedin.com/in/mrakashsingh/",
       "twitter": "https://twitter.com/johndoe"
     }
   }

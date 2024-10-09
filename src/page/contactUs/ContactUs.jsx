@@ -165,11 +165,13 @@ import { motion } from 'framer-motion'
 import { Mail, Send, User, AtSign, MessageCircle, Sparkles, Coffee } from 'lucide-react'
 import { AnimatedSection } from "../../component/Animation/AnimatedSection"
 import { fadeInUp } from "../../utils/animations"
+import emailjs from '@emailjs/browser';
+
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
+    user_name: '',
+    user_email: '',
     message: ''
   })
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -192,12 +194,26 @@ const ContactUs = () => {
     
     // Here you would typically send the form data to your backend
     console.log('Form submitted:', formData)
+
+
+    emailjs
+      .send('service_kijt8y5', 'template_ffpjjld', formData, {
+        publicKey: '6KMWkpFp5wnaC4vut',
+      })
+      .then(
+        () => {
+          console.log('SUCCESS!');
+        },
+        (error) => {
+          console.log('FAILED...', error.text);
+        },
+      );
     
     setIsSubmitting(false)
     setShowThankYou(true)
     setTimeout(() => {
       setShowThankYou(false)
-      setFormData({ name: '', email: '', message: '' })
+      setFormData({ user_name: '', user_email: '', message: '' })
     }, 3000)
   }
 
@@ -302,9 +318,9 @@ const ContactUs = () => {
               <motion.input
                 whileFocus={{ scale: 1.02 }}
                 type="text"
-                name="name"
-                placeholder="Your Name"
-                value={formData.name}
+                name="user_name"
+                placeholder="name"
+                value={formData.user_name}
                 onChange={handleChange}
                 className={`${inputClasses} pl-10`}
                 required
@@ -321,9 +337,9 @@ const ContactUs = () => {
               <motion.input
                 whileFocus={{ scale: 1.02 }}
                 type="email"
-                name="email"
-                placeholder="Your Email"
-                value={formData.email}
+                name="user_email"
+                placeholder="email"
+                value={formData.user_email}
                 onChange={handleChange}
                 className={`${inputClasses} pl-10`}
                 required

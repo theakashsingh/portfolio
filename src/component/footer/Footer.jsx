@@ -8,8 +8,8 @@ const Footer = () => {
   };
 
   const social = {
-    github: "https://github.com/johndoe",
-    linkedin: "https://linkedin.com/in/johndoe",
+    "github": "https://github.com/theakashsingh",
+      "linkedin": "https://www.linkedin.com/in/mrakashsingh/",
     twitter: "https://twitter.com/johndoe",
   };
   return (

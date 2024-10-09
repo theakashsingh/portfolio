@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { motion } from 'framer-motion';
 import { Code, Sparkles, Cpu, Coffee } from 'lucide-react';
+import profileImg from "./profile.png"
 
 export function ProfileCard() {
   return (
@@ -36,7 +37,7 @@ export function ProfileCard() {
             >
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-slate-900">
                 <img 
-                  src="/api/placeholder/200/200" 
+                  src={profileImg}
                   alt="Profile" 
                   className="w-full h-full object-cover"
                 />
