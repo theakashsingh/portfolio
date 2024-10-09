@@ -1,0 +1,16 @@
+[
+    {
+      "id": 1,
+      "role": "Frontend Developer",
+      "company": "Humane Club",
+      "date": "2021 Oct - 2023 July",
+      "description": "Leading a team of developers in building modern web applications"
+    },
+    {
+      "id": 2,
+      "role": "Frontend Developer",
+      "company": "Paperbridge Solutions Pvt Ltd.",
+      "date": "2023 Aug - present",
+      "description": "Developed and maintained multiple client projects"
+    }
+]

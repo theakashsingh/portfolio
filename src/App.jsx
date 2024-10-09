@@ -4,6 +4,9 @@ import Navbar from "./component/Navbar/Navbar";
 import Home from "./page/home/Home";
 import About from "./page/about/About";
 import { Projects } from "./page/projects/Projects";
+import Experience from "./page/experience/Experience";
+import Footer from "./component/footer/Footer";
+import ContactUs from "./page/contactUs/ContactUs";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
         <Home />
         <About/>
         <Projects/>   
+        <Experience/>
+        <ContactUs/>
+        <Footer/>
       </motion.div>
     </>
   );
