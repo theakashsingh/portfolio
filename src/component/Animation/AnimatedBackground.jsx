@@ -46,7 +46,7 @@ export function AnimatedBackground() {
 // Usage example - add to your layout or individual pages:
 export function Layout({ children }) {
   return (
-    <div className="relative min-h-screen bg-slate-900">
+    <div className="relative min-h-screen">
       <AnimatedBackground />
       <div className="relative z-10">
         {children}

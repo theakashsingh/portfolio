@@ -2,10 +2,12 @@ import { AnimatedSection } from "../../component/Animation/AnimatedSection"
 import { motion } from "framer-motion"
 import { fadeInUp, slideIn } from "../../utils/animations"
 import { Code, Palette, Terminal, Brain, Coffee, Rocket } from 'lucide-react'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
+import getTotalCommitsByUser from "../../utils/gitHub/gitCommit"
 
 const About = () => {
   const [hoveredSkill, setHoveredSkill] = useState(null)
+  const [totalCommits, setTotalCommits] = useState(0)
 
   const skills = [
     { 
@@ -34,7 +36,7 @@ const About = () => {
   const funFacts = [
     { icon: <Coffee className="text-orange-400" />, text: "Cups of coffee per day", number: "4" },
     { icon: <Brain className="text-purple-400" />, text: "Projects completed", number: "15+" },
-    { icon: <Rocket className="text-blue-400" />, text: "Git commits", number: "1000+" }
+    { icon: <Rocket className="text-blue-400" />, text: "Git commits", number: "220+" }
   ]
 
   const container = {
@@ -47,6 +49,19 @@ const About = () => {
     }
   }
 
+  useEffect(() => {
+    console.log(totalCommits);
+    
+    getTotalCommitsByUser("theakashsingh").then(totalCommits => {
+      console.log(totalCommits);
+      setTotalCommits(totalCommits)
+      
+    })
+    .catch(error => {
+      console.error('Error fetching commits:', error);
+    });
+  }, [])
+  
   return (
     <AnimatedSection id="about" className="py-16 px-4 bg-slate-900/50">
       <div className="container mx-auto">
