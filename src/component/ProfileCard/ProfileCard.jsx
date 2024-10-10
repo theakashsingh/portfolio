@@ -6,7 +6,7 @@ import profileImg from "./profile.png"
 export function ProfileCard() {
   return (
     <motion.div 
-      className="relative w-80 h-96 mb-12"
+      className="relative w-80 h-96"
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.5 }}

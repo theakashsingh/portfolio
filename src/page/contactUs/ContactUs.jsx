@@ -189,33 +189,23 @@ const ContactUs = () => {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1500))
-    
-    // Here you would typically send the form data to your backend
-    console.log('Form submitted:', formData)
-
-
-    emailjs
-      .send('service_kijt8y5', 'template_ffpjjld', formData, {
+    try {
+      await emailjs.send('service_kijt8y5', 'template_ffpjjld', formData, {
         publicKey: '6KMWkpFp5wnaC4vut',
       })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-    
-    setIsSubmitting(false)
-    setShowThankYou(true)
-    setTimeout(() => {
-      setShowThankYou(false)
-      setFormData({ user_name: '', user_email: '', message: '' })
-    }, 3000)
+      setShowThankYou(true)
+      setTimeout(() => {
+        setShowThankYou(false)
+        setFormData({ user_name: '', user_email: '', message: '' })
+      }, 3000)
+    } catch (error) {
+      console.error('Failed to send email:', error)
+      // Handle error - maybe show an error message to the user
+    } finally {
+      setIsSubmitting(false)
+    }
   }
+
 
   const inputClasses = "w-full mb-4 p-3 bg-slate-900/80 rounded-lg border border-slate-700 focus:border-purple-400 outline-none transition-all duration-300 text-gray-300 backdrop-blur-sm"
   

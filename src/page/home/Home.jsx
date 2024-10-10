@@ -89,7 +89,7 @@ const Home = () => {
           
           {/* Right side - Profile Card */}
           <motion.div 
-            className="flex-1 w-full max-w-md"
+            className="flex items-center justify-center flex-1 w-full max-w-md"
             variants={slideIn('right')}
           >
             <ProfileCard />
