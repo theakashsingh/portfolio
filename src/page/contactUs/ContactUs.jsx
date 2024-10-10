@@ -24,28 +24,28 @@
 //   const handleSubmit = async (e) => {
 //     e.preventDefault()
 //     setIsSubmitting(true)
-    
+
 //     // Simulate form submission
 //     await new Promise(resolve => setTimeout(resolve, 1500))
-    
+
 //     // Here you would typically send the form data to your backend
 //     console.log('Form submitted:', formData)
-    
+
 //     setIsSubmitting(false)
 //     setFormData({ name: '', email: '', message: '' })
 //   }
 
 //   const inputClasses = "w-full mb-4 p-3 bg-slate-900 rounded-lg border border-slate-700 focus:border-purple-400 outline-none transition-all duration-300 text-gray-300"
-  
+
 //   return (
 //     <AnimatedSection id="contact" className="py-16 bg-slate-800/50 relative overflow-hidden">
 //       {/* Background decoration */}
-//       <motion.div 
+//       <motion.div
 //         className="absolute inset-0 opacity-30"
-//         animate={{ 
+//         animate={{
 //           backgroundPosition: ['0% 0%', '100% 100%'],
 //         }}
-//         transition={{ 
+//         transition={{
 //           duration: 20,
 //           repeat: Infinity,
 //           repeatType: "reverse"
@@ -64,14 +64,14 @@
 //           transition={{ duration: 0.5 }}
 //           className="text-center mb-12"
 //         >
-//           <motion.h2 
+//           <motion.h2
 //             className="text-4xl font-bold mb-4 inline-flex items-center justify-center"
 //             whileHover={{ scale: 1.05 }}
 //           >
 //             <Mail className="mr-2 text-purple-400" />
 //             Get In Touch
 //           </motion.h2>
-//           <motion.p 
+//           <motion.p
 //             className="text-gray-400 max-w-md mx-auto"
 //             variants={fadeInUp}
 //           >
@@ -79,7 +79,7 @@
 //           </motion.p>
 //         </motion.div>
 
-//         <motion.form 
+//         <motion.form
 //           className="max-w-lg mx-auto"
 //           onSubmit={handleSubmit}
 //         >
@@ -159,73 +159,82 @@
 
 // export default ContactUs
 
-
-import { useState } from 'react'
-import { motion } from 'framer-motion'
-import { Mail, Send, User, AtSign, MessageCircle, Sparkles, Coffee } from 'lucide-react'
-import { AnimatedSection } from "../../component/Animation/AnimatedSection"
-import { fadeInUp } from "../../utils/animations"
-import emailjs from '@emailjs/browser';
-
+import { useState } from "react";
+import { motion } from "framer-motion";
+import {
+  Mail,
+  Send,
+  User,
+  AtSign,
+  MessageCircle,
+  Sparkles,
+  Coffee,
+} from "lucide-react";
+import { AnimatedSection } from "../../component/Animation/AnimatedSection";
+import { fadeInUp } from "../../utils/animations";
+import emailjs from "@emailjs/browser";
 
 const ContactUs = () => {
   const [formData, setFormData] = useState({
-    user_name: '',
-    user_email: '',
-    message: ''
-  })
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [showThankYou, setShowThankYou] = useState(false)
+    user_name: "",
+    user_email: "",
+    message: "",
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [showThankYou, setShowThankYou] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target
+  const handleChange = e => {
+    const { name, value } = e.target;
     setFormData(prev => ({
       ...prev,
-      [name]: value
-    }))
-  }
+      [name]: value,
+    }));
+  };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    setIsSubmitting(true)
-    
+  const handleSubmit = async e => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
     try {
-      await emailjs.send('service_kijt8y5', 'template_ffpjjld', formData, {
-        publicKey: '6KMWkpFp5wnaC4vut',
-      })
-      setShowThankYou(true)
+      await emailjs.send("service_kijt8y5", "template_ffpjjld", formData, {
+        publicKey: "6KMWkpFp5wnaC4vut",
+      });
+      setShowThankYou(true);
       setTimeout(() => {
-        setShowThankYou(false)
-        setFormData({ user_name: '', user_email: '', message: '' })
-      }, 3000)
+        setShowThankYou(false);
+        setFormData({ user_name: "", user_email: "", message: "" });
+      }, 3000);
     } catch (error) {
-      console.error('Failed to send email:', error)
+      console.error("Failed to send email:", error);
       // Handle error - maybe show an error message to the user
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
+  const inputClasses =
+    "w-full mb-4 p-3 bg-slate-900/80 rounded-lg border border-slate-700 focus:border-purple-400 outline-none transition-all duration-300 text-gray-300 backdrop-blur-sm";
 
-  const inputClasses = "w-full mb-4 p-3 bg-slate-900/80 rounded-lg border border-slate-700 focus:border-purple-400 outline-none transition-all duration-300 text-gray-300 backdrop-blur-sm"
-  
   return (
-    <AnimatedSection id="contact" className="py-16 bg-gradient-to-b from-slate-800/50 to-slate-900/50 relative overflow-hidden">
+    <AnimatedSection
+      id="contact"
+      className="py-16 bg-gradient-to-b from-slate-800/50 to-slate-900/50 relative overflow-hidden"
+    >
       {/* Floating elements */}
       {[...Array(5)].map((_, i) => (
         <motion.div
           key={i}
           className="absolute hidden sm:block"
           initial={{ y: 0 }}
-          animate={{ 
+          animate={{
             y: [-20, 20],
             x: i % 2 === 0 ? [-10, 10] : [10, -10],
           }}
-          transition={{ 
+          transition={{
             duration: 4 + i,
             repeat: Infinity,
             repeatType: "reverse",
-            delay: i * 0.5
+            delay: i * 0.5,
           }}
           style={{
             left: `${20 + i * 20}%`,
@@ -236,7 +245,11 @@ const ContactUs = () => {
             whileHover={{ scale: 1.2, rotate: 360 }}
             className="text-purple-400/30"
           >
-            {i % 2 === 0 ? <Coffee size={20 + i * 4} /> : <Sparkles size={20 + i * 4} />}
+            {i % 2 === 0 ? (
+              <Coffee size={20 + i * 4} />
+            ) : (
+              <Sparkles size={20 + i * 4} />
+            )}
           </motion.div>
         </motion.div>
       ))}
@@ -249,24 +262,24 @@ const ContactUs = () => {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <motion.h2 
+          <motion.h2
             className="text-4xl font-bold mb-4 inline-flex items-center justify-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
             whileHover={{ scale: 1.05 }}
           >
-            <Mail className="mr-2 text-purple-400" />
-            Let&apos;s Create Something Amazing
+            <Mail className="mr-2 text-purple-400" /> Let&apos;s Create
+            Something Amazing
           </motion.h2>
-          <motion.p 
+          <motion.p
             className="text-gray-400 max-w-md mx-auto"
             variants={fadeInUp}
           >
-            Whether you have a question, a project in mind, or just want to say hi - 
-            I&apos;m all ears! ✨
+            Whether you have a question, a project in mind, or just want to say
+            hi - I&apos;m all ears! ✨
           </motion.p>
         </motion.div>
 
         <div className="flex flex-col lg:flex-row gap-8 items-center justify-center">
-          <motion.div 
+          <motion.div
             className="lg:w-1/3"
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -274,14 +287,25 @@ const ContactUs = () => {
             transition={{ duration: 0.5 }}
           >
             <div className="bg-slate-800/50 p-6 rounded-lg border border-slate-700 backdrop-blur-sm">
-              <h3 className="text-xl font-semibold mb-4 text-purple-400">Why Reach Out?</h3>
+              <h3 className="text-xl font-semibold mb-4 text-purple-400">
+                Why Reach Out?
+              </h3>
               <ul className="space-y-3">
                 {[
-                  { icon: <Coffee className="text-yellow-400" />, text: "Collaborate on projects" },
-                  { icon: <MessageCircle className="text-green-400" />, text: "Get expert advice" },
-                  { icon: <Sparkles className="text-pink-400" />, text: "Discuss new ideas" }
+                  {
+                    icon: <Coffee className="text-yellow-400" />,
+                    text: "Collaborate on projects",
+                  },
+                  {
+                    icon: <MessageCircle className="text-green-400" />,
+                    text: "Get expert advice",
+                  },
+                  {
+                    icon: <Sparkles className="text-pink-400" />,
+                    text: "Discuss new ideas",
+                  },
                 ].map((item, index) => (
-                  <motion.li 
+                  <motion.li
                     key={index}
                     className="flex items-center space-x-3"
                     whileHover={{ x: 5 }}
@@ -294,14 +318,14 @@ const ContactUs = () => {
             </div>
           </motion.div>
 
-          <motion.form 
+          <motion.form
             className="lg:w-1/2 w-full max-w-lg"
             onSubmit={handleSubmit}
           >
             <div className="relative mb-4">
               <motion.div
                 className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-                whileHover={{ scale: 1.1, color: '#A855F7' }}
+                whileHover={{ scale: 1.1, color: "#A855F7" }}
               >
                 <User size={20} />
               </motion.div>
@@ -320,7 +344,7 @@ const ContactUs = () => {
             <div className="relative mb-4">
               <motion.div
                 className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"
-                whileHover={{ scale: 1.1, color: '#A855F7' }}
+                whileHover={{ scale: 1.1, color: "#A855F7" }}
               >
                 <AtSign size={20} />
               </motion.div>
@@ -350,7 +374,9 @@ const ContactUs = () => {
             <motion.button
               whileHover={{ scale: 1.02 }}
               whileTap={{ scale: 0.98 }}
-              className={`w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-3 px-4 rounded-lg transition-all flex items-center justify-center ${isSubmitting ? 'opacity-75 cursor-not-allowed' : ''}`}
+              className={`w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold py-3 px-4 rounded-lg transition-all flex items-center justify-center ${
+                isSubmitting ? "opacity-75 cursor-not-allowed" : ""
+              }`}
               disabled={isSubmitting}
             >
               {isSubmitting ? (
@@ -379,7 +405,7 @@ const ContactUs = () => {
         </div>
       </div>
     </AnimatedSection>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;

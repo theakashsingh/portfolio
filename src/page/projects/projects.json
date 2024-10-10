@@ -1,22 +1,22 @@
 [
     {
       "id": 1,
-      "title": "E-commerce Platform",
-      "description": "A full-featured online shopping platform built with React and Node.js",
-      "tech": ["React", "Node.js", "MongoDB", "Express"],
-      "github": "https://github.com/johndoe/ecommerce",
-      "live": "https://ecommerce-project.com",
+      "title": "FitFlexClub",
+      "description": "fitflexclub is fitness(gym) website",
+      "tech": ["React", "Typescript","Tailwind CSS"],
+      "github": "https://github.com/theakashsingh/fitclub",
+      "live": "https://fitflexclub.netlify.app",
       "image": "/api/placeholder/400/300",
-      "iframeUrl": "https://ecommerce-project.com"
+      "iframeUrl": "https://fitflexclub.netlify.app"
     },
     {
       "id": 2,
-      "title": "Social Media Dashboard",
+      "title": "myfortune11",
       "description": "Analytics dashboard for social media managers",
-      "tech": ["Vue", "Firebase", "Tailwind CSS"],
-      "github": "https://github.com/johndoe/social-dashboard",
-      "live": "https://social-dashboard.com",
+      "tech": ["React", "Javascript", "Tailwind CSS"],
+      "github": "https://github.com/theakashsingh/myfortune11",
+      "live": "https://feature11.netlify.app",
       "image": "/api/placeholder/400/300",
-      "iframeUrl": "https://social-dashboard.com"
+      "iframeUrl": "https://feature11.netlify.app"
     }
   ]
