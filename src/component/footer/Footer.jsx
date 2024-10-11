@@ -10,7 +10,7 @@ const Footer = () => {
   const social = {
     "github": "https://github.com/theakashsingh",
       "linkedin": "https://www.linkedin.com/in/mrakashsingh/",
-    twitter: "https://twitter.com/johndoe",
+    "twitter": "https://x.com/mr_aksh_",
   };
   return (
     <footer className="bg-slate-900 py-8 border-t border-slate-800">
