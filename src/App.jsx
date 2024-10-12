@@ -7,7 +7,6 @@ import { Projects } from "./page/projects/Projects";
 import Experience from "./page/experience/Experience";
 import Footer from "./component/footer/Footer";
 import ContactUs from "./page/contactUs/ContactUs";
-import { Layout } from "./component/Animation/AnimatedBackground";
 
 function App() {
   return (
@@ -19,22 +18,11 @@ function App() {
         transition={{ duration: 0.5 }}
       >
         <Navbar />
-        <Layout>
-          <Home />
-        </Layout>
-        <Layout>
-          <About />
-        </Layout>
-        <Layout>
-          <Projects />{" "}
-        </Layout>
-        <Layout>
-          <Experience />
-        </Layout>
-        <Layout>
-          <ContactUs />
-        </Layout>
-
+        <Home />
+        <About />
+        <Projects /> 
+        <Experience />
+        <ContactUs />
         <Footer />
       </motion.div>
     </>
