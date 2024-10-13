@@ -1,5 +1,5 @@
-const GITHUB_TOKEN = 'YOUR_ACCESS_TOKEN';
-const USERNAME = 'username';
+const GITHUB_TOKEN = import.meta.env.VITE_GITHUB_ACCESS_TOKEN;
+const USERNAME = import.meta.env.VITE_GITHUB_USER_NAME;
 
 export default async function getTotalCommitsByUser(username) {
   const headers = {
