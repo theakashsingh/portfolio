@@ -180,7 +180,7 @@ export default function Navbar() {
               <NavLink href="#home">Home</NavLink>
               <NavLink href="#about">About</NavLink>
               <NavLink href="#projects">Projects</NavLink>
-              <NavLink href="#experience">Experience</NavLink>
+              <NavLink href="#experience">My Journey</NavLink>
               <NavLink href="#contact">Contact</NavLink>
             </div>
           </div>
@@ -209,7 +209,7 @@ export default function Navbar() {
                 Projects
               </NavLink>
               <NavLink href="#experience" mobile>
-                Experience
+              My Journey
               </NavLink>
               <NavLink href="#contact" mobile>
                 Contact

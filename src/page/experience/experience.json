@@ -1,16 +1,37 @@
 [
-    {
-      "id": 1,
-      "role": "Frontend Developer",
-      "company": "Humane Club",
-      "date": "2021 Oct - 2023 July",
-      "description": "Leading a team of developers in building modern web applications"
-    },
-    {
-      "id": 2,
-      "role": "Frontend Developer",
-      "company": "Paperbridge Solutions Pvt Ltd.",
-      "date": "2023 Aug - present",
-      "description": "Developed and maintained multiple client projects"
-    }
+  {
+    "id": 1,
+    "role": "Secondary School",
+    "institution": "Nehru Bolodyan Inter collage",
+    "date": "2013 - 2014",
+    "description": "Completed high school education with 78 percentile"
+  },
+  {
+    "id": 2,
+    "role": "Higher Secondary Certificate",
+    "institution": "Nehru Bolodyan Inter collage",
+    "date": "2013 - 2015",
+    "description": "Completed high school education with 76 percentile"
+  },
+  {
+    "id": 3,
+    "role": "Undergraduate Student",
+    "institution": "V.B.S.P University",
+    "date": "2016 - 2020",
+    "description": "Completed Bachelor of Technology in Information Technology with 70 percentile"
+  },
+  {
+    "id": 4,
+    "role": "Frontend Developer",
+    "company": "Humane Club",
+    "date": "2021 Oct - 2023 July",
+    "description": "Led a team of developers in building modern web applications"
+  },
+  {
+    "id": 5,
+    "role": "Frontend Developer",
+    "company": "Paperbridge Solutions Pvt Ltd.",
+    "date": "2023 Aug - present",
+    "description": "Developed and maintained multiple client projects"
+  }
 ]
