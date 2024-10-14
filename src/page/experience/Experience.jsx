@@ -11,8 +11,9 @@ export default function Experience() {
       <AnimatedSection id="experience" className="py-16 relative">
         <div className="container mx-auto px-4">
           <motion.h2 
-            className="text-3xl font-bold mb-12 text-center"
+            className="text-3xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
             variants={fadeInUp}
+            whileHover={{ scale: 1.05 }}
           >
             <Briefcase className="inline mr-2 text-purple-400" />
             From Classroom to Workplace

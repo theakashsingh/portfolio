@@ -10,8 +10,9 @@ export function Projects() {
     <AnimatedSection id="projects" className="py-16 bg-gradient-to-b from-slate-900 to-slate-800">
       <div className="container mx-auto px-4">
         <motion.h2 
-          className="text-4xl font-bold mb-12 text-center"
+          className="text-4xl font-bold mb-12 text-center bg-clip-text text-transparent bg-gradient-to-r from-purple-400 to-pink-600"
           variants={fadeInUp}
+          whileHover={{ scale: 1.05 }}
         >
           <Star className="inline mr-2 text-yellow-400" />
           Featured Projects
