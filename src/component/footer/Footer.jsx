@@ -31,7 +31,7 @@ const Footer = () => {
           ))}
         </div>
         <p className="text-slate-400">
-          Made with 💜 by Dev Name © {new Date().getFullYear()}
+          Made with 💜 by Akash Dev © {new Date().getFullYear()}
         </p>
       </div>
     </footer>

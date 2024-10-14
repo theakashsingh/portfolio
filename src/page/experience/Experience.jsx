@@ -15,7 +15,7 @@ export default function Experience() {
             variants={fadeInUp}
           >
             <Briefcase className="inline mr-2 text-purple-400" />
-            Work Experience
+            From Classroom to Workplace
           </motion.h2>
           
           <div className="relative">
