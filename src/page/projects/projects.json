@@ -11,12 +11,12 @@
     },
     {
       "id": 2,
-      "title": "myfortune11",
-      "description": "Analytics dashboard for social media managers",
+      "title": "Cinebility",
+      "description": "Explore movie trailers seamlessly in this feature-rich React web app, designed for an immersive and intuitive user experience.",
       "tech": ["React", "Javascript", "Tailwind CSS"],
-      "github": "https://github.com/theakashsingh/myfortune11",
-      "live": "https://feature11.netlify.app",
+      "github": "https://github.com/theakashsingh/cinebility",
+      "live": "https://cinebility.netlify.app/",
       "image": "/api/placeholder/400/300",
-      "iframeUrl": ""
+      "iframeUrl": "https://cinebility.netlify.app/"
     }
   ]
