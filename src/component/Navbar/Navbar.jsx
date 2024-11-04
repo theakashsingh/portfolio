@@ -181,7 +181,7 @@ export default function Navbar() {
               <NavLink href="#about">About</NavLink>
               <NavLink href="#projects">Projects</NavLink>
               <NavLink href="#experience">My Journey</NavLink>
-              <NavLink href="#contact">Contact</NavLink>
+              <NavLink href="#contact">Connect</NavLink>
             </div>
           </div>
 
@@ -212,7 +212,7 @@ export default function Navbar() {
               My Journey
               </NavLink>
               <NavLink href="#contact" mobile>
-                Contact
+                Connect
               </NavLink>
             </div>
           </motion.div>

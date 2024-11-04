@@ -27,10 +27,10 @@ export default function ProjectCard({ project }) {
           ))}
         </div>
         <div className="flex space-x-4">
-          <a href={project.github} className="flex-1 bg-slate-800 text-center py-2 rounded hover:bg-slate-700">
+          <a href={project.github} target="_blank" className="flex-1 bg-slate-800 text-center py-2 rounded hover:bg-slate-700">
             <Github className="inline mr-2" /> GitHub
           </a>
-          <a href={project.live} className="flex-1 bg-purple-600 text-center py-2 rounded hover:bg-purple-700">
+          <a href={project.live} target="_blank" className="flex-1 bg-purple-600 text-center py-2 rounded hover:bg-purple-700">
             Live Demo
           </a>
         </div>

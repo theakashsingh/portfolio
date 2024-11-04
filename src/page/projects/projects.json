@@ -18,5 +18,15 @@
       "live": "https://cinebility.netlify.app/",
       "image": "/api/placeholder/400/300",
       "iframeUrl": "https://cinebility.netlify.app/"
+    },
+    {
+      "id": 3,
+      "title": "CV Analytics Dashboard",
+      "description": "An interactive EV Analytics Dashboard that visualizes CSV data on electric vehicle trends, geography, and market insights with dynamic charts and a responsive design.",
+      "tech": ["React", "Javascript", "Tailwind CSS"],
+      "github": "https://github.com/theakashsingh/analytics-dashboard",
+      "live": "https://dashboard-ev-analytics.netlify.app/",
+      "image": "/api/placeholder/400/300",
+      "iframeUrl": "https://dashboard-ev-analytics.netlify.app/"
     }
   ]
