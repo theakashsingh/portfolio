@@ -28,5 +28,15 @@
       "live": "https://dashboard-ev-analytics.netlify.app/",
       "image": "/api/placeholder/400/300",
       "iframeUrl": "https://dashboard-ev-analytics.netlify.app/"
+    },
+    {
+      "id": 4,
+      "title": "Teamify Pokemon",
+      "description": "Easily create, edit, and manage your Pokémon teams with drag-and-drop functionality. Organize your team, view detailed stats, and optimize strategies with a user-friendly interface, starting with a mockup login page.",
+      "tech": ["React", "Typescript", "Tailwind CSS"],
+      "github": "https://github.com/theakashsingh/pokemon-team-management",
+      "live": "https://pokemon-teamify.netlify.app/",
+      "image": "/api/placeholder/400/300",
+      "iframeUrl": "https://pokemon-teamify.netlify.app/"
     }
   ]
